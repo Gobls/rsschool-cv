@@ -26,3 +26,8 @@ console.log(sum(2, 3)); // 5
 
 ### Work experience 
 **Software Engineer** *Saratov State University | 2023–present*
+
+### Education 
+**Saratov State University** 
+*Faculty of Computer Science and Information Technology* 
+Part-time, 3rd year (2022–2027)
