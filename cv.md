@@ -15,3 +15,14 @@ A software engineer with experience in supporting and improving web resources Cu
 - CSS/SASS 
 - JavaScript (Basic)  
 - Git
+
+## Code Example
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+console.log(sum(2, 3)); // 5
+```
+
+### Work experience 
+**Software Engineer** *Saratov State University | 2023–present*
