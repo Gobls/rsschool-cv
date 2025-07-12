@@ -31,3 +31,6 @@ console.log(sum(2, 3)); // 5
 **Saratov State University** 
 *Faculty of Computer Science and Information Technology* 
 Part-time, 3rd year (2022–2027)
+
+### English 
+A1 (for beginners)
