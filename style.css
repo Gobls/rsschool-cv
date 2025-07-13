@@ -1,0 +1,269 @@
+:root {
+  --dark-bg: #1a1a2e;
+  --darker: #16213e;
+  --accent: #0f3460;
+  --highlight: #e94560;
+  --text: #f1f1f1;
+  --text-secondary: #b8b8b8;
+  --card-bg: #16213e;
+  --border: rgba(255,255,255,0.1);
+  --section:rgba(255,255,255,0.05)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--dark-bg);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-container {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cv-header, .cv-footer {
+  padding: 30px;
+  position: relative;
+}
+
+.cv-header {
+  background: linear-gradient(135deg, var(--accent), var(--darker));
+  overflow: hidden;
+}
+
+.cv-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--highlight);
+}
+
+.cv-footer {
+  background: var(--darker);
+  text-align: center;
+}
+
+.header-content, .footer-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-content {
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: var(--highlight);
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profession, .company, .faculty, .period, .year {
+  color: var(--text-secondary);
+}
+
+.profession {
+  font-size: 1.2rem;
+}
+
+.cv-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+section {
+  background: var(--section);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contacts-list, .skills-list, .projects-list {
+  list-style: none;
+}
+
+.contacts-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-list li, .projects-list li {
+  margin: 0 10px 10px 0;
+  padding: 8px 15px;
+  background: rgba(233, 69, 96, 0.2);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-nav li {
+  white-space: nowrap;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.main-nav a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--section);
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+.main-nav a:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+pre {
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border-left: 4px solid var(--highlight);
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #f8f8f2;
+}
+
+.experience-item, .education-item {
+  margin-bottom: 15px;
+}
+
+.job-title, .university {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.company, .faculty, .period {
+  font-size: 0.9rem;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.1);
+  object-fit: cover;
+}
+
+.rs-logo {
+  height: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section:target {
+  animation: highlight 1.5s ease;
+  border-left: 4px solid var(--highlight);
+  padding-left: 16px;
+}
+
+@keyframes highlight {
+  from { background-color: rgba(233, 69, 96, 0.3); }
+  to { background-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .header-content, .footer-content, .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .main-nav ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .cv-container {
+    border-radius: 0;
+  }
+  
+  section {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+}
